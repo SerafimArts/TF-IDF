@@ -3,10 +3,10 @@
     <a href="https://packagist.org/packages/serafim/tf-idf"><img src="https://poser.pugx.org/serafim/tf-idf/version?style=for-the-badge" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/serafim/tf-idf"><img src="https://poser.pugx.org/serafim/tf-idf/v/unstable?style=for-the-badge" alt="Latest Unstable Version"></a>
     <a href="https://packagist.org/packages/serafim/tf-idf"><img src="https://poser.pugx.org/serafim/tf-idf/downloads?style=for-the-badge" alt="Total Downloads"></a>
-    <a href="https://raw.githubusercontent.com/SerafimArts/TFIDF/master/LICENSE.md"><img src="https://poser.pugx.org/serafim/tf-idf/license?style=for-the-badge" alt="License MIT"></a>
+    <a href="https://raw.githubusercontent.com/SerafimArts/TF-IDF/master/LICENSE.md"><img src="https://poser.pugx.org/serafim/tf-idf/license?style=for-the-badge" alt="License MIT"></a>
 </p>
 <p align="center">
-    <a href="https://github.com/SerafimArts/TFIDF/actions"><img src="https://github.com/SerafimArts/TFIDF/workflows/build/badge.svg"></a>
+    <a href="https://github.com/SerafimArts/TF-IDF/actions"><img src="https://github.com/SerafimArts/TF-IDF/workflows/build/badge.svg"></a>
 </p>
 
 ## Introduction

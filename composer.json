@@ -2,11 +2,11 @@
     "name": "serafim/tf-idf",
     "type": "library",
     "description": "Simple TF-IDF Implementation",
-    "homepage": "https://github.com/SerafimArts/TFIDF",
+    "homepage": "https://github.com/SerafimArts/TF-IDF",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/SerafimArts/TFIDF/issues",
-        "source": "https://github.com/SerafimArts/TFIDF"
+        "issues": "https://github.com/SerafimArts/TF-IDF/issues",
+        "source": "https://github.com/SerafimArts/TF-IDF"
     },
     "authors": [
         {
