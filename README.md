@@ -6,7 +6,7 @@
     <a href="https://raw.githubusercontent.com/SerafimArts/TF-IDF/master/LICENSE.md"><img src="https://poser.pugx.org/serafim/tf-idf/license?style=for-the-badge" alt="License MIT"></a>
 </p>
 <p align="center">
-    <a href="https://github.com/SerafimArts/TF-IDF/actions"><img src="https://github.com/SerafimArts/TF-IDF/workflows/build/badge.svg"></a>
+    <a href="https://github.com/SerafimArts/TF-IDF/actions"><img src="https://github.com/SerafimArts/TF-IDF/workflows/tests/badge.svg"></a>
 </p>
 
 ## Introduction
