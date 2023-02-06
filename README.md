@@ -74,13 +74,14 @@ Getting information about words:
 
 ```php
 $vectorizer = new \Serafim\TFIDF\Vectorizer();
+
 $vectorizer->addFile(__DIR__ . '/path/to/file-1.txt');
 $vectorizer->addFile(__DIR__ . '/path/to/file-2.txt');
 
 foreach ($loader->compute() as $document => $entries) {
-    dump($document);
+    var_dump($document);
     foreach ($entries as $entry) {
-        dump($entry);
+        var_dump($entry);
     }
 }
 ```
@@ -88,36 +89,36 @@ foreach ($loader->compute() as $document => $entries) {
 Example Result:
 
 ```
-Serafim\TFIDF\Document\FileDocument {#13
-  #locale: "ru_RU"
-  +pathname: "/home/example/how-it-works.md"
+Serafim\TFIDF\Document\FileDocument {
+    locale: "ru_RU"
+    pathname: "/home/example/how-it-works.md"
 }
 
-Serafim\TFIDF\Entry {#34
-  +term: "работает"
-  +occurrences: 4
-  +df: 1
-  +tf: 0.012012012012012
-  +idf: 0.69314718055995
-  +tfidf: 0.0083260922589783
+Serafim\TFIDF\Entry {
+    term: "работает"
+    occurrences: 4
+    df: 1
+    tf: 0.012012012012012
+    idf: 0.69314718055995
+    tfidf: 0.0083260922589783
 }
 
-Serafim\TFIDF\Entry {#26
-  +term: "php"
-  +occurrences: 26
-  +df: 2
-  +tf: 0.078078078078078
-  +idf: 0.0
-  +tfidf: 0.0
+Serafim\TFIDF\Entry {
+    term: "php"
+    occurrences: 26
+    df: 2
+    tf: 0.078078078078078
+    idf: 0.0
+    tfidf: 0.0
 }
 
-Serafim\TFIDF\Entry {#27
-  +term: "запуска"
-  +occurrences: 2
-  +df: 1
-  +tf: 0.006006006006006
-  +idf: 0.69314718055995
-  +tfidf: 0.0041630461294892
+Serafim\TFIDF\Entry {
+    term: "запуска"
+    occurrences: 2
+    df: 1
+    tf: 0.006006006006006
+    idf: 0.69314718055995
+    tfidf: 0.0041630461294892
 }
 
 // ...etc...
@@ -144,6 +145,16 @@ $vectorizer->add(new class implements \Serafim\TFIDF\Document\TextDocumentInterf
 });
 ```
 
+### Creating Documents
+
+```php
+$vectorizer = new \Serafim\TFIDF\Vectorizer();
+
+$file = $vectorizer->createFile(__DIR__ . '/path/to/file.txt');
+$text = $vectorizer->createText('example text');
+$stream = $vectorizer->createStream(fopen(__DIR__ . '/path/to/file.txt', 'rb'));
+```
+
 ### Computing
 
 To calculate TF-IDF between loaded documents, use the "`compute()``" method:
@@ -159,9 +170,9 @@ To calculate the TF-IDF between the loaded documents and the passed one, use
 the "`computeFor()`" method:
 
 ```php
-$result = $vectorizer->computeFor(
-    $vectorizer->createText('example text'),
-);
+$text = $vectorizer->createText('example text');
+
+$result = $vectorizer->computeFor($text);
 
 // $result = list<object(Serafim\TFIDF\Entry)>
 ```
