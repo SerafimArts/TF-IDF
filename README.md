@@ -158,7 +158,7 @@ $stream = $vectorizer->createStream(fopen(__DIR__ . '/path/to/file.txt', 'rb'));
 
 ### Computing
 
-To calculate TF-IDF between loaded documents, use the "`compute()``" method:
+To calculate TF-IDF between loaded documents, use the `compute(): iterable` method:
 
 ```php
 foreach ($vectorizer->compute() as $document => $result) { 
@@ -168,7 +168,7 @@ foreach ($vectorizer->compute() as $document => $result) {
 ```
 
 To calculate the TF-IDF between the loaded documents and the passed one, use 
-the "`computeFor()`" method:
+the `computeFor(StreamingDocumentInterface|TextDocumentInterface): iterable` method:
 
 ```php
 $text = $vectorizer->createText('example text');
