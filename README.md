@@ -80,6 +80,7 @@ $vectorizer->addFile(__DIR__ . '/path/to/file-2.txt');
 
 foreach ($loader->compute() as $document => $entries) {
     var_dump($document);
+
     foreach ($entries as $entry) {
         var_dump($entry);
     }
