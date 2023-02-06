@@ -89,7 +89,7 @@ foreach ($loader->compute() as $document => $entries) {
 
 Example Result:
 
-```
+```php
 Serafim\TFIDF\Document\FileDocument {
     locale: "ru_RU"
     pathname: "/home/example/how-it-works.md"
