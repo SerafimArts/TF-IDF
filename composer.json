@@ -1,7 +1,8 @@
 {
     "name": "serafim/tf-idf",
     "type": "library",
-    "description": "Simple TF-IDF Implementation",
+    "description": "Library to calculate TF-IDF (Term Frequency - Inverse Document Frequency) for generic documents",
+    "keywords": ["tf-idf", "tf", "idf", "tfidf", "text", "document", "statistic"],
     "homepage": "https://github.com/SerafimArts/TF-IDF",
     "license": "MIT",
     "support": {
