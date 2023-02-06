@@ -22,6 +22,43 @@ the formula for TF-IDF calculation.
 TF-IDF = Term Frequency (TF) * Inverse Document Frequency (IDF)
 ```
 
+### Term Frequency
+
+the ratio of the number of occurrences of a certain word to the total number of 
+words in the document. Thus, the importance of the word $t_{{i}}$ within a 
+single document is evaluated
+
+$\mathrm{tf}(t, d) = \frac{n_t}{\sum _kn_k}$
+
+where $n_t$ is the number of occurrences of the word $t$ in the document, and 
+the denominator is the total number of words in the document.
+
+### Inverse Document Frequency
+
+The inverse of the frequency with which a certain word occurs in the documents 
+of the collection. The founder of this concept is [Karen Spark Jones](https://en.wikipedia.org/wiki/Karen_Sp%C3%A4rck_Jones). 
+Accounting for IDF reduces the weight of commonly used words. There is only one 
+IDF value for each unique word within a given collection of documents.
+
+$\mathrm{idf}(t, D) = \log \frac {|D|}{| \{\,d_{i}\in D\mid t\in d_{i}\,\} |}$
+
+where
+
+- $|D|$ — The number of documents in the collection;
+- ${\displaystyle |\{d_{i}\in D\mid t\in d_{i}\}|}$ — the number of 
+  documents in collection $D$ where $t$ occurs (when ${\displaystyle n_{t}\neq 0}$).
+
+The choice of the base of the logarithm in the formula does not matter, since
+changing the base changes the weight of each word by a constant factor, which
+does not affect the weight ratio.
+
+Thus, the TF-IDF measure is the product of two factors:
+
+$\operatorname{tf-idf}(t, d, D) = \operatorname{tf}(t,d)\times \operatorname{idf}(t,D)$
+
+High weight in TF-IDF will be given to words with high frequency within a
+particular document and low frequency in other documents.
+
 ## Installation
 
 TF-IDF is available as composer repository and can be 
