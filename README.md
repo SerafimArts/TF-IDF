@@ -40,7 +40,7 @@ of the collection. The founder of this concept is [Karen Spark Jones](https://en
 Accounting for IDF reduces the weight of commonly used words. There is only one 
 IDF value for each unique word within a given collection of documents.
 
-$\mathrm{idf}(t, D) = \log \frac {|D|}{| \{\,d_{i}\in D\mid t\in d_{i}\,\} |}$
+$\mathrm{tf-idf}(t, d, D) = \mathrm{tf}(t,d)\times \mathrm{idf}(t,D)$
 
 where
 
@@ -78,7 +78,7 @@ $vectorizer = new \Serafim\TFIDF\Vectorizer();
 $vectorizer->addFile(__DIR__ . '/path/to/file-1.txt');
 $vectorizer->addFile(__DIR__ . '/path/to/file-2.txt');
 
-foreach ($loader->compute() as $document => $entries) {
+foreach ($vectorizer->compute() as $document => $entries) {
     var_dump($document);
 
     foreach ($entries as $entry) {
