@@ -40,7 +40,7 @@ of the collection. The founder of this concept is [Karen Spark Jones](https://en
 Accounting for IDF reduces the weight of commonly used words. There is only one 
 IDF value for each unique word within a given collection of documents.
 
-$\mathrm{tf-idf}(t, d, D) = \mathrm{tf}(t,d)\times \mathrm{idf}(t,D)$
+$\mathrm{idf}(t, D) = \log \frac {|D|}{| \{\,d_{i}\in D\mid t\in d_{i}\,\} |}$
 
 where
 
@@ -54,7 +54,7 @@ does not affect the weight ratio.
 
 Thus, the TF-IDF measure is the product of two factors:
 
-$\operatorname{tf-idf}(t, d, D) = \operatorname{tf}(t,d)\times \operatorname{idf}(t,D)$
+$\mathrm{tf-idf}(t, d, D) = \mathrm{tf}(t,d)\times \mathrm{idf}(t,D)$
 
 High weight in TF-IDF will be given to words with high frequency within a
 particular document and low frequency in other documents.
